@@ -16,9 +16,17 @@ Data base scheme for the configuration of ZERO DEV. This schema will be used to 
 
 ## Editable file
 
-Editable schema file for MySql workbench. [download](https://drive.google.com/file/d/1fPxnR_a1MA79gV-KpKpUcf-lSZzLbMsi/view?usp=sharing)
+Editable schema file for MySql Workbench. [download](https://drive.google.com/file/d/1fPxnR_a1MA79gV-KpKpUcf-lSZzLbMsi/view?usp=sharing)
 
 ## Data Dictionary
+
+### How to generate
+
+This was generated using the following repository, [MySql Plugin](https://github.com/letrunghieu/mysql-workbench-plugin-doc-generating).
+
+Download the [zip file](https://github.com/letrunghieu/mysql-workbench-plugin-doc-generating/releases) extract and you will have a `mysql-workbench-plugin-doc-generating.py` file, go to mysql Workbench and install the plugin `Scripting > Install Plugin`, select the .py file. Finally go to the ERR and go to `Tools > Utilities > Generate Documentation`.
+
+If you do not have a ERR diagram a new one can be reverser engeniered by workbench just go to `Database > Reverse Engineer`
 
 # Schema documentation
 
