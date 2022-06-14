@@ -1,12 +1,12 @@
-# Create a tutorial for a form: Functional document
+# Alter table: Functional document
 
-| app      | feature id | feature type | feature name                 | business unit | process   | department |
-| :------- | :--------- | :----------- | :--------------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-04 | web          | Create a tutorial for a form | division x    | process y | finance    |
+| app      | feature id | feature type | feature name | business unit | process   | department |
+| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-15 | web          | Alter table  | division x    | process y | finance    |
 
 ---
 
-Creates a tutorial to use a form in the RAD UI.
+The user can use the UI to modify a table data.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

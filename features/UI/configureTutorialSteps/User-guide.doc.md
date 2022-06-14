@@ -1,12 +1,12 @@
-# Create application form: User guide document
+# Configure tutorial steps: Functional document
 
-| app      | feature id | feature type | feature name            | business unit | process   | department |
-| :------- | :--------- | :----------- | :---------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-01 | web          | Create application form | division x    | process y | finance    |
+| app      | feature id | feature type | feature name             | business unit | process   | department |
+| :------- | :--------- | :----------- | :----------------------- | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-16 | web          | Configure tutorial steps | division x    | process y | finance    |
 
 ---
 
-Form to create an application.
+Configure the tutorial steps to show in the form.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

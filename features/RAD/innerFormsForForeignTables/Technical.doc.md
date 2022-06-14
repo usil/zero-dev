@@ -1,12 +1,12 @@
-# Create application form: Technical document
+# Inner Forms For Foreign Tables: Functional document
 
-| app      | feature id | feature type | feature name            | business unit | process   | department |
-| :------- | :--------- | :----------- | :---------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-01 | web          | Create application form | division x    | process y | finance    |
+| app      | feature id | feature type | feature name                   | business unit | process   | department |
+| :------- | :--------- | :----------- | :----------------------------- | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-11 | web          | Inner Forms For Foreign Tables | division x    | process y | finance    |
 
 ---
 
-Form to create an application.
+When you try to create a new entity instance with a foreign relation a form inside the form for the foreign entity will be shown.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

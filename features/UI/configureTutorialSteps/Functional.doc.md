@@ -1,12 +1,12 @@
-# View form guide: Functional document
+# Configure tutorial steps: Functional document
 
-| app      | feature id | feature type | feature name    | business unit | process   | department |
-| :------- | :--------- | :----------- | :-------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-09 | web          | View form guide | division x    | process y | finance    |
+| app      | feature id | feature type | feature name             | business unit | process   | department |
+| :------- | :--------- | :----------- | :----------------------- | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-16 | web          | Configure tutorial steps | division x    | process y | finance    |
 
 ---
 
-Shows a guide to use the form based on the configuration.
+Configure the tutorial steps to show in the form.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

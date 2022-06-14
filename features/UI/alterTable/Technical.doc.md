@@ -1,12 +1,12 @@
-# View form guide: Technical document
+# Alter table: Functional document
 
-| app      | feature id | feature type | feature name    | business unit | process   | department |
-| :------- | :--------- | :----------- | :-------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-09 | web          | View form guide | division x    | process y | finance    |
+| app      | feature id | feature type | feature name | business unit | process   | department |
+| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-15 | web          | Alter table  | division x    | process y | finance    |
 
 ---
 
-Shows a guide to use the form based on the configuration.
+The user can use the UI to modify a table data.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

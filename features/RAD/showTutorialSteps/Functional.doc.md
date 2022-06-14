@@ -1,12 +1,12 @@
-# Create application form: Functional document
+# Show tutorial steps: Functional document
 
-| app      | feature id | feature type | feature name            | business unit | process   | department |
-| :------- | :--------- | :----------- | :---------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-01 | web          | Create application form | division x    | process y | finance    |
+| app      | feature id | feature type | feature name        | business unit | process   | department |
+| :------- | :--------- | :----------- | :------------------ | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-12 | web          | Show tutorial steps | division x    | process y | finance    |
 
 ---
 
-Form to create an application.
+Show tutorial steps on how to use the form.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

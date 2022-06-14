@@ -1,12 +1,12 @@
-# Create a tutorial for a form: Technical document
+# Scheduler: Functional document
 
-| app      | feature id | feature type | feature name                 | business unit | process   | department |
-| :------- | :--------- | :----------- | :--------------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-04 | web          | Create a tutorial for a form | division x    | process y | finance    |
+| app      | feature id | feature type | feature name | business unit | process   | department |
+| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
+| ZERO DEV | feature-13 | web          | Scheduler    | division x    | process y | finance    |
 
 ---
 
-Creates a tutorial to use a form in the RAD UI.
+An scheduler, using cron.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 
