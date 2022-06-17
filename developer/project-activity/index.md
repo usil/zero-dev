@@ -26,8 +26,6 @@
 
 | Functionality                        | Weight | Completion | Comment |
 | ------------------------------------ | ------ | ---------- | ------- |
-| `Alter table`                        | 3      | 0%         |         |
-| `Configure tutorial steps`           | 2      | 0%         |         |
 | `Create composed origin`             | 3      | 0%         |         |
 | `Create entity form`                 | 5      | 0%         |         |
 | `Create field form`                  | 5      | 0%         |         |
@@ -49,3 +47,5 @@
 | `Configure Webhook for an entity`    | 3      | 0%         |         |
 | `Create button field`                | 3      | 0%         |         |
 | `Configure default filters per user` | 3      | 0%         |         |
+| `Alter table`                        | 3      | 0%         |         |
+| `Configure tutorial steps`           | 2      | 0%         |         |
