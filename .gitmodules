@@ -1,0 +1,6 @@
+[submodule "zero-dev-js-starter"]
+	path = zero-dev-js-starter
+	url = https://github.com/usil/zero-dev-js-starter.git
+[submodule "zero-code-api"]
+	path = zero-code-api
+	url = https://github.com/usil/zero-code-api.git

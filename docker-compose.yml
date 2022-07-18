@@ -1,0 +1,111 @@
+version: "3.7"
+services:
+  zero-dev:
+    build:
+      context: ./zero-dev-js-starter
+      dockerfile: Dockerfile
+    container_name: zero-dev
+    ports:
+      - "2900:2900"
+    environment:
+      SESSION_SECRET: secret
+      OAUTH2_CLIENT_ID: clientId
+      ZERO_CODE_API: $ZERO_CODE_API
+      SECURITY_OAUTH2_BASE_URL: $SECURITY_OAUTH2_BASE_URL
+      SECURITY_OAUTH2_REFRESH_TOKEN_URL: /refresh
+      SECURITY_OAUTH2_TOKEN_USER_URL: /token_user
+      SECURITY_OAUTH2_AUTHORIZE_URL: /authorize
+      SECURITY_OAUTH2_MAX_SECONDS_ALLOWED_FOR_IDLE_USER: 9000
+    depends_on:
+      zero-code-api:
+        condition: service_healthy
+    networks:
+      - app_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  zero-code-api:
+    build:
+      context: ./zero-code-api
+      dockerfile: Dockerfile
+    container_name: zero-code-api
+    ports:
+      - "2111:2111"
+    environment:
+      DATA_BASE_NAME: "zero_dev"
+      DATA_BASE_HOST: host.docker.internal
+      DATA_BASE_PORT: 3306
+      DATA_BASE_USER: "usr_zero_dev"
+      DATA_BASE_PASSWORD: $MYSQL_PASSWORD
+      NODE_ENV: "production"
+      JWT_SECRET: $JWT_SECRET
+      PORT: 2111
+      SWAGGER_EMAIL: jon@doe.com
+      SWAGGER_NAME: USIL
+      SWAGGER_URL: https://github.com/usil/zero-code-api
+      CRYPTO_KEY: $CRYPTO_KEY
+      LOG_FILE_PATH: logs.log
+      LOG_LEVEL: "info"
+      CUSTOM_SECURITY_BASE_URL: $CUSTOM_SECURITY_BASE_URL
+      VALIDATE_TOKEN_ENDPOINT: /v2/oauth2/token/validate
+      SECURITY_APP_IDENTIFIER: appid
+    healthcheck:
+      test: curl --fail http://localhost:2111 || exit 1
+      interval: 10s
+      retries: 100
+      start_period: 20s
+      timeout: 10s
+    networks:
+      - app_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+  zero-dev-db:
+    image: mysql:5.7
+    command: mysqld --sql_mode="" --max_connections=1100 --general-log=1 --general-log-file=/var/log/mysql/general-log.log
+    container_name: zero-dev-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: $MYSQL_PASSWORD
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      MYSQL_USER: "usr_zero_dev"
+      MYSQL_DATABASE: "zero_dev"
+      TZ: America/Lima
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+    healthcheck:
+      test: 'cat /var/log/mysql/general-log.log | grep "root@localhost on using Socket"'
+      interval: 1s
+      retries: 120
+  mock-horus:
+    build:
+      context: ./mock-horus
+      dockerfile: Dockerfile
+    container_name: mock-api
+    ports:
+      - "1010:1010"
+    environment:
+      PORT: 1010
+      REDIRECT_FRONT_BASE_URL: $REDIRECT_FRONT_BASE_URL
+      OWN_BASE_URL: $OWN_BASE_URL
+    depends_on:
+      zero-code-api:
+        condition: service_healthy
+    networks:
+      - app_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+networks:
+  app_network:
+    driver: bridge
