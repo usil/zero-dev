@@ -54,6 +54,22 @@ else
   fi
 fi
 
+if [[ -z "$ZERO_DEV_PORT" ]]
+then
+  echo "Enter ZERO_DEV_PORT: 2900"
+  read _ZERO_DEV_PORT
+  export ZERO_DEV_PORT=$_ZERO_DEV_PORT
+  echo "ZERO_DEV_PORT=$ZERO_DEV_PORT" >> .env
+fi
+
+if [[ -z "$ZERO_CODE_API_PORT" ]]
+then
+  echo "Enter ZERO_CODE_API_PORT: 2111"
+  read _ZERO_CODE_API_PORT
+  export ZERO_CODE_API_PORT=$_ZERO_CODE_API_PORT
+  echo "ZERO_CODE_API_PORT=$ZERO_CODE_API_PORT" >> .env
+fi
+
 if [[ -z "$ZERO_CODE_API" ]]
 then
   echo "Enter ZERO_CODE_API: http://localhost:2111, http://10.20.30.40:2111 or https://eventhos.foo.com"

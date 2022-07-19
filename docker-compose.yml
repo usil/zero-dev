@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: zero-dev
     ports:
-      - "2900:2900"
+      - "$ZERO_DEV_PORT:2900"
     environment:
       SESSION_SECRET: secret
       OAUTH2_CLIENT_ID: clientId
@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
     container_name: zero-code-api
     ports:
-      - "2111:2111"
+      - "$ZERO_CODE_API_PORT:2111"
     environment:
       DATA_BASE_NAME: "zero_dev"
       DATA_BASE_HOST: host.docker.internal
@@ -80,7 +80,7 @@ services:
       MYSQL_DATABASE: "zero_dev"
       TZ: America/Lima
     networks:
-      - app_network      
+      - app_network
     deploy:
       resources:
         limits:
