@@ -20,13 +20,15 @@ echo "#################"
 echo "Updating source code"
 echo "#################"
 
-cd $workspaces_path/eventhos-api
+git submodule update --init
+
+cd $workspaces_path/zero-code-api
 git fetch
 latest_branch=$(git for-each-ref --sort=-committerdate | head -n 1 | awk -F '/' '{ print $NF }')
 git checkout $latest_branch
 git pull origin $latest_branch
 
-cd $workspaces_path/eventhos-web
+cd $workspaces_path/zero-dev-js-starter
 git fetch
 latest_branch=$(git for-each-ref --sort=-committerdate | head -n 1 | awk -F '/' '{ print $NF }')
 git checkout $latest_branch
@@ -46,9 +48,9 @@ if [ ! -f .env ]; then
   echo "" > .env
 else
   if [ -s .env ]; then
-    echo ".env is empty"
-  else
     export $(cat .env | xargs)
+  else
+    echo ".env is empty"
   fi
 fi
 
@@ -62,7 +64,7 @@ fi
 
 if [[ -z "$SECURITY_OAUTH2_BASE_URL" ]]
 then
-  echo "Enter EVENTHOS_WEB_BASE_URL: (The mock server) "
+  echo "Enter SECURITY_OAUTH2_BASE_URL: (Horus) "
   read _SECURITY_OAUTH2_BASE_URL
   export SECURITY_OAUTH2_BASE_URL=$_SECURITY_OAUTH2_BASE_URL
   echo "SECURITY_OAUTH2_BASE_URL=$SECURITY_OAUTH2_BASE_URL" >> .env
@@ -70,7 +72,7 @@ fi
 
 if [[ -z "$CUSTOM_SECURITY_BASE_URL" ]]
 then
-  echo "Enter CUSTOM_SECURITY_BASE_URL: (2109) "
+  echo "Enter CUSTOM_SECURITY_BASE_URL: (Horus)"
   read _CUSTOM_SECURITY_BASE_URL
   export CUSTOM_SECURITY_BASE_URL=$_CUSTOM_SECURITY_BASE_URL
   echo "CUSTOM_SECURITY_BASE_URL=$CUSTOM_SECURITY_BASE_URL" >> .env

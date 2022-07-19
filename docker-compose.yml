@@ -54,6 +54,9 @@ services:
       retries: 100
       start_period: 20s
       timeout: 10s
+    depends_on:
+      zero-dev-db:
+        condition: service_healthy
     networks:
       - app_network
     extra_hosts:
@@ -76,14 +79,16 @@ services:
       MYSQL_USER: "usr_zero_dev"
       MYSQL_DATABASE: "zero_dev"
       TZ: America/Lima
+    networks:
+      - app_network      
     deploy:
       resources:
         limits:
           memory: 1024M
     healthcheck:
-      test: 'cat /var/log/mysql/general-log.log | grep "root@localhost on using Socket"'
-      interval: 1s
-      retries: 120
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
   mock-horus:
     build:
       context: ./mock-horus
