@@ -62,6 +62,14 @@ then
   echo "ZERO_DEV_PORT=$ZERO_DEV_PORT" >> .env
 fi
 
+if [[ -z "$ZERO_DEV_UI_PORT" ]]
+then
+  echo "Enter ZERO_DEV_UI_PORT: 2000"
+  read _ZERO_DEV_UI_PORT
+  export ZERO_DEV_UI_PORT=$_ZERO_DEV_UI_PORT
+  echo "ZERO_DEV_UI_PORT=$ZERO_DEV_UI_PORT" >> .env
+fi
+
 if [[ -z "$ZERO_CODE_API_PORT" ]]
 then
   echo "Enter ZERO_CODE_API_PORT: 2111"
@@ -114,7 +122,7 @@ if [[ -z "$UI_CUSTOM_SECURITY_BASE_URL" ]]
 then
   echo "Enter UI_CUSTOM_SECURITY_BASE_URL: (The base url for where the angular application should call for security (2000)) "
   read _UI_CUSTOM_SECURITY_BASE_URL
-  export UI_CUSTOM_SECURITY_BASE_URL=$UI_CUSTOM_SECURITY_BASE_URL
+  export UI_CUSTOM_SECURITY_BASE_URL=$_UI_CUSTOM_SECURITY_BASE_URL
   echo "UI_CUSTOM_SECURITY_BASE_URL=$UI_CUSTOM_SECURITY_BASE_URL" >> .env
 fi
 
