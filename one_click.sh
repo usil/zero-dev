@@ -86,14 +86,6 @@ then
   echo "SECURITY_OAUTH2_BASE_URL=$SECURITY_OAUTH2_BASE_URL" >> .env
 fi
 
-if [[ -z "$CUSTOM_SECURITY_BASE_URL" ]]
-then
-  echo "Enter CUSTOM_SECURITY_BASE_URL: (Horus)"
-  read _CUSTOM_SECURITY_BASE_URL
-  export CUSTOM_SECURITY_BASE_URL=$_CUSTOM_SECURITY_BASE_URL
-  echo "CUSTOM_SECURITY_BASE_URL=$CUSTOM_SECURITY_BASE_URL" >> .env
-fi
-
 if [[ -z "$REDIRECT_FRONT_BASE_URL" ]]
 then
   echo "Enter REDIRECT_FRONT_BASE_URL: (The url to the front end of the rad (2900)) "
@@ -102,12 +94,28 @@ then
   echo "REDIRECT_FRONT_BASE_URL=$REDIRECT_FRONT_BASE_URL" >> .env
 fi
 
+if [[ -z "$REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI" ]]
+then
+  echo "Enter REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI: (The url to the front end of the zero dev ui (2000)) "
+  read _REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI
+  export REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI=$_REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI
+  echo "REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI=$REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI" >> .env
+fi
+
 if [[ -z "$OWN_BASE_URL" ]]
 then
   echo "Enter OWN_BASE_URL: (The comple base url to the horus mock itself) "
   read _OWN_BASE_URL
   export OWN_BASE_URL=$_OWN_BASE_URL
   echo "OWN_BASE_URL=$OWN_BASE_URL" >> .env
+fi
+
+if [[ -z "$UI_CUSTOM_SECURITY_BASE_URL" ]]
+then
+  echo "Enter UI_CUSTOM_SECURITY_BASE_URL: (The base url for where the angular application should call for security (2000)) "
+  read _UI_CUSTOM_SECURITY_BASE_URL
+  export UI_CUSTOM_SECURITY_BASE_URL=$UI_CUSTOM_SECURITY_BASE_URL
+  echo "UI_CUSTOM_SECURITY_BASE_URL=$UI_CUSTOM_SECURITY_BASE_URL" >> .env
 fi
 
 # https://stackoverflow.com/a/50850881

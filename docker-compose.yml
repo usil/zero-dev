@@ -1,5 +1,30 @@
 version: "3.7"
 services:
+  zero-dev-ui:
+    build:
+      context: ./zero-dev-ui
+      dockerfile: Dockerfile
+    container_name: zero-dev-ui
+    ports:
+      - "$ZERO_DEV_UI_PORT:2000"
+    environment:
+      SESSION_SECRET: secret
+      OAUTH2_CLIENT_ID: clientId
+      ZERO_CODE_API_BASE_URL: $ZERO_CODE_API
+      WEB_TITLE: Zero Dev
+      UI_CUSTOM_SECURITY_BASE_URL: $UI_CUSTOM_SECURITY_BASE_URL
+      SECURITY_OAUTH2_BASE_URL: $SECURITY_OAUTH2_BASE_URL
+      SECURITY_OAUTH2_REFRESH_TOKEN_URL: /refresh
+      SECURITY_OAUTH2_TOKEN_USER_URL: /token_user_for_ui
+      SECURITY_OAUTH2_AUTHORIZE_URL: /authorize_for_ui
+      SECURITY_OAUTH2_MAX_SECONDS_ALLOWED_FOR_IDLE_USER: 9000
+    depends_on:
+      zero-code-api:
+        condition: service_healthy
+    networks:
+      - app_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   zero-dev:
     build:
       context: ./zero-dev-js-starter
@@ -45,7 +70,7 @@ services:
       CRYPTO_KEY: $CRYPTO_KEY
       LOG_FILE_PATH: logs.log
       LOG_LEVEL: "info"
-      CUSTOM_SECURITY_BASE_URL: $CUSTOM_SECURITY_BASE_URL
+      CUSTOM_SECURITY_BASE_URL: $SECURITY_OAUTH2_BASE_URL
       VALIDATE_TOKEN_ENDPOINT: /v2/oauth2/token/validate
       SECURITY_APP_IDENTIFIER: appid
     healthcheck:
@@ -86,7 +111,7 @@ services:
         limits:
           memory: 1024M
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 20s
       retries: 10
   mock-horus:
@@ -100,6 +125,7 @@ services:
       PORT: 1010
       REDIRECT_FRONT_BASE_URL: $REDIRECT_FRONT_BASE_URL
       OWN_BASE_URL: $OWN_BASE_URL
+      REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI: $REDIRECT_FRONT_BASE_URL_ZERO_DEV_UI
     depends_on:
       zero-code-api:
         condition: service_healthy
