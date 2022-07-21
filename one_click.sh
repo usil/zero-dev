@@ -34,6 +34,12 @@ latest_branch=$(git for-each-ref --sort=-committerdate | head -n 1 | awk -F '/' 
 git checkout $latest_branch
 git pull origin $latest_branch
 
+cd $workspaces_path/zero-dev-ui
+git fetch
+latest_branch=$(git for-each-ref --sort=-committerdate | head -n 1 | awk -F '/' '{ print $NF }')
+git checkout $latest_branch
+git pull origin $latest_branch
+
 
 echo "#################"
 echo "Launching"
