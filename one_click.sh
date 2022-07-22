@@ -141,5 +141,5 @@ if [ "$build" == "true" ]; then
   delete_image_if_exist "mock-horus"
   docker-compose up -d --build
 else
-  docker-compose down && docker-compose up -d
+  docker-compose down && docker-compose up -d --build
 fi
