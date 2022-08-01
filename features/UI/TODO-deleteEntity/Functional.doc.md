@@ -1,12 +1,12 @@
-# Configure tutorial steps: Functional document
+# Delete entity: Functional document
 
-| app      | feature id | feature type | feature name             | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-16 | web          | Configure tutorial steps | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name  |
+| :------- | :----------- | :----------- | :------------ |
+| ZERO DEV | 4152b5de5aac | web          | Delete entity |
 
 ---
 
-Configure the tutorial steps to show in the form.
+Form to delete an entity.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

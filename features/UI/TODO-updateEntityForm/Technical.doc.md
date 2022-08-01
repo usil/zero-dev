@@ -1,12 +1,12 @@
-# View applications list: Technical document
+# Update entity form: Technical document
 
-| app      | feature id   | feature type | feature name           |
-| :------- | :----------- | :----------- | :--------------------- |
-| ZERO DEV | b7e1dabbe63b | web          | View applications list |
+| app      | feature id   | feature type | feature name       | business unit | process   | department |
+| :------- | :----------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
+| ZERO DEV | fda714d59bb5 | web          | Update entity form | division x    | process y | finance    |
 
 ---
 
-View an application list in a table.
+Update an entity by form.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

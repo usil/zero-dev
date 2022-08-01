@@ -1,8 +1,8 @@
 # View entities list: Functional document
 
-| app      | feature id | feature type | feature name       | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-14 | web          | View entities list | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name       |
+| :------- | :----------- | :----------- | :----------------- |
+| ZERO DEV | 505b82f5f57d | web          | View entities list |
 
 ---
 

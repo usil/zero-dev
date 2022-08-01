@@ -1,8 +1,8 @@
 # Update application form: Functional document
 
-| app      | feature id | feature type | feature name            | business unit | process   | department |
-| :------- | :--------- | :----------- | :---------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-09 | web          | Update application form | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name            |
+| :------- | :----------- | :----------- | :---------------------- |
+| ZERO DEV | 44d03f76ca97 | web          | Update application form |
 
 ---
 

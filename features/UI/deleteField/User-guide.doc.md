@@ -1,8 +1,8 @@
 # Delete field: User guide document
 
-| app      | feature id | feature type | feature name | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-08 | web          | Delete field | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name |
+| :------- | :----------- | :----------- | :----------- |
+| ZERO DEV | b4c39e986dd9 | web          | Delete field |
 
 ---
 

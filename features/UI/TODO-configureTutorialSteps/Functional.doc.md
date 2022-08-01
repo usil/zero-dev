@@ -1,12 +1,12 @@
-# Create entity form: Functional document
+# Configure tutorial steps: Functional document
 
-| app      | feature id   | feature type | feature name       |
-| :------- | :----------- | :----------- | :----------------- |
-| ZERO DEV | eb59edc8b79b | web          | Create entity form |
+| app      | feature id           | feature type | feature name             |
+| :------- | :------------------- | :----------- | :----------------------- |
+| ZERO DEV | feature-0bea0f78f12a | web          | Configure tutorial steps |
 
 ---
 
-Form to create a new entity.
+Configure the tutorial steps to show in the form.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

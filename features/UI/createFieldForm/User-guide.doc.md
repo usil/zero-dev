@@ -1,21 +1,16 @@
 # Create field form: User guide document
 
-| app      | feature id | feature type | feature name      | business unit | process   | department |
-| :------- | :--------- | :----------- | :---------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-03 | web          | Create field form | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name      | business unit | process   | department |
+| :------- | :----------- | :----------- | :---------------- | :------------ | :-------- | :--------- |
+| ZERO DEV | 595f6bca902c | web          | Create field form | division x    | process y | finance    |
 
 ---
 
 Form to create a new field for an entity.
 
-<img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
-
-![](https://instrktiv.com/media/user-manual-template/screenshots-snagit.webp)
-
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-2. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-3. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-4. sunt in culpa qui officia deserunt mollit anim id est laborum.
+<a href="https://drive.google.com/file/d/1bcmxsrFyuN9Sp4zGiTjkBHCQCbcm5ov7/view?usp=sharing">
+    <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
+</a>
 
 ---
 

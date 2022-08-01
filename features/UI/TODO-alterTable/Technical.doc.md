@@ -1,8 +1,8 @@
 # Alter table: Functional document
 
-| app      | feature id | feature type | feature name | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-15 | web          | Alter table  | division x    | process y | finance    |
+| app      | feature id           | feature type | feature name |
+| :------- | :------------------- | :----------- | :----------- |
+| ZERO DEV | feature-0c25efc0f93e | web          | Alter table  |
 
 ---
 

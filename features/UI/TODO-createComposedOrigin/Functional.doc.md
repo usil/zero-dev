@@ -1,12 +1,12 @@
-# Create entity form: Functional document
+# Create composed origin field: Functional document
 
-| app      | feature id   | feature type | feature name       |
-| :------- | :----------- | :----------- | :----------------- |
-| ZERO DEV | eb59edc8b79b | web          | Create entity form |
+| app      | feature id           | feature type | feature name                 |
+| :------- | :------------------- | :----------- | :--------------------------- |
+| ZERO DEV | feature-5ad81be021c3 | web          | Create composed origin field |
 
 ---
 
-Form to create a new entity.
+Form to create a field that has a composed origin.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

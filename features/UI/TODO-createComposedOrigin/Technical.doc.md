@@ -1,12 +1,12 @@
-# View applications list: Technical document
+# Create composed origin field: Technical document
 
-| app      | feature id   | feature type | feature name           |
-| :------- | :----------- | :----------- | :--------------------- |
-| ZERO DEV | b7e1dabbe63b | web          | View applications list |
+| app      | feature id           | feature type | feature name                 |
+| :------- | :------------------- | :----------- | :--------------------------- |
+| ZERO DEV | feature-5ad81be021c3 | web          | Create composed origin field |
 
 ---
 
-View an application list in a table.
+Form to create a field that has a composed origin.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

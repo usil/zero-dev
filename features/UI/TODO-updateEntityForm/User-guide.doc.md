@@ -1,14 +1,14 @@
-# Delete application: User guide document
+# Update entity form: User guide document
 
 | app      | feature id   | feature type | feature name       |
 | :------- | :----------- | :----------- | :----------------- |
-| ZERO DEV | 8fb19c725802 | web          | Delete application |
+| ZERO DEV | fda714d59bb5 | web          | Update entity form |
 
 ---
 
-Form to delete an application.
+Update an entity by form.
 
-<a href="https://drive.google.com/file/d/1ua-lgbY05FOhbfLfU4FRXBF5Q3iKWUq0/view?usp=sharing">
+<a href="https://drive.google.com/file/d/1xxwwD0Vt03vD_-ydweQR8m2nQ_SncuC-/view?usp=sharing">
     <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 </a>
 

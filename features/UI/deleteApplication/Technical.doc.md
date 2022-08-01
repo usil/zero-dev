@@ -1,8 +1,8 @@
 # Delete application: Technical document
 
-| app      | feature id | feature type | feature name       | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-06 | web          | Delete application | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name       |
+| :------- | :----------- | :----------- | :----------------- |
+| ZERO DEV | 8fb19c725802 | web          | Delete application |
 
 ---
 

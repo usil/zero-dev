@@ -1,8 +1,8 @@
 # Create entity form: Technical document
 
-| app      | feature id | feature type | feature name       | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-02 | web          | Create entity form | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name       |
+| :------- | :----------- | :----------- | :----------------- |
+| ZERO DEV | eb59edc8b79b | web          | Create entity form |
 
 ---
 

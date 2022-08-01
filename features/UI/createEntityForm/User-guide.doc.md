@@ -1,21 +1,16 @@
 # Create entity form: User guide document
 
-| app      | feature id | feature type | feature name       | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-02 | web          | Create entity form | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name       |
+| :------- | :----------- | :----------- | :----------------- |
+| ZERO DEV | eb59edc8b79b | web          | Create entity form |
 
 ---
 
 Form to create a new entity.
 
-<img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
-
-![](https://instrktiv.com/media/user-manual-template/screenshots-snagit.webp)
-
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-2. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-3. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-4. sunt in culpa qui officia deserunt mollit anim id est laborum.
+<a href="https://drive.google.com/file/d/1GDMMGhq5u4fAU6TRHfOsb_4knCWUXWUt/view?usp=sharing">
+    <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
+</a>
 
 ---
 
@@ -23,4 +18,4 @@ Form to create a new entity.
 
 | name         | last updated |
 | :----------- | ------------ |
-| Luis Huertas | 30 May 2022  |
+| Luis Huertas | 01 Ago 2022  |

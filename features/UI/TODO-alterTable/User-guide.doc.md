@@ -1,12 +1,12 @@
-# Update entity form: User guide document
+# Alter table: Functional document
 
-| app      | feature id | feature type | feature name       | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-10 | web          | Update entity form | division x    | process y | finance    |
+| app      | feature id           | feature type |
+| :------- | :------------------- | :----------- |
+| ZERO DEV | feature-0c25efc0f93e | web          |
 
 ---
 
-Update an entity by form.
+The user can use the UI to modify a table data.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

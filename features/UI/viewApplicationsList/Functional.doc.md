@@ -1,8 +1,8 @@
 # View applications list: Functional document
 
-| app      | feature id | feature type | feature name           | business unit | process   | department |
-| :------- | :--------- | :----------- | :--------------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-12 | web          | View applications list | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name           |
+| :------- | :----------- | :----------- | :--------------------- |
+| ZERO DEV | b7e1dabbe63b | web          | View applications list |
 
 ---
 

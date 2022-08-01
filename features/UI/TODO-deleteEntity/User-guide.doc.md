@@ -1,12 +1,12 @@
-# Alter table: Functional document
+# Delete entity: User guide document
 
-| app      | feature id | feature type | feature name | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-15 | web          | Alter table  | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name  |
+| :------- | :----------- | :----------- | :------------ |
+| ZERO DEV | 4152b5de5aac | web          | Delete entity |
 
 ---
 
-The user can use the UI to modify a table data.
+Form to delete an entity.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

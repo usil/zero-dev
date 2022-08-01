@@ -1,8 +1,8 @@
 # View entities fields list: User guide document
 
-| app      | feature id | feature type | feature name              | business unit | process   | department |
-| :------- | :--------- | :----------- | :------------------------ | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-13 | web          | View entities fields list | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name              |
+| :------- | :----------- | :----------- | :------------------------ |
+| ZERO DEV | 69ada41e4d0f | web          | View entities fields list |
 
 ---
 

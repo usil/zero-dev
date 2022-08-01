@@ -1,14 +1,14 @@
-# Update application form: User guide document
+# Create entity form: User guide document
 
 | app      | feature id   | feature type | feature name            |
 | :------- | :----------- | :----------- | :---------------------- |
-| ZERO DEV | 44d03f76ca97 | web          | Update application form |
+| ZERO DEV | eee1b2423aec | web          | Create application form |
 
 ---
 
-Update an application by form.
+Form to create a new application.
 
-<a href="https://drive.google.com/file/d/1t2yw_inl1JLd0CsPiJ-JW4HXyB8nhPLi/view?usp=sharing">
+<a href="https://drive.google.com/file/d/1Sw9oIp-Dp8SzuKl8d-iKfhPaWsKfF3XX/view?usp=sharing">
     <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 </a>
 
@@ -18,4 +18,4 @@ Update an application by form.
 
 | name         | last updated |
 | :----------- | ------------ |
-| Luis Huertas | 30 May 2022  |
+| Luis Huertas | 01 Ago 2022  |

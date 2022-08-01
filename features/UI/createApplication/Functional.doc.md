@@ -1,12 +1,12 @@
-# Update entity form: Functional document
+# Create Application form: Functional document
 
-| app      | feature id | feature type | feature name       | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-10 | web          | Update entity form | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name            |
+| :------- | :----------- | :----------- | :---------------------- |
+| ZERO DEV | eee1b2423aec | web          | Create application form |
 
 ---
 
-Update an entity by form.
+Form to create a new application.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

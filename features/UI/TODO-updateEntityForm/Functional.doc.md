@@ -1,12 +1,12 @@
-# Alter table: Functional document
+# Update entity form: Functional document
 
-| app      | feature id | feature type | feature name | business unit | process   | department |
-| :------- | :--------- | :----------- | :----------- | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-15 | web          | Alter table  | division x    | process y | finance    |
+| app      | feature id   | feature type | feature name       | business unit | process   | department |
+| :------- | :----------- | :----------- | :----------------- | :------------ | :-------- | :--------- |
+| ZERO DEV | fda714d59bb5 | web          | Update entity form | division x    | process y | finance    |
 
 ---
 
-The user can use the UI to modify a table data.
+Update an entity by form.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

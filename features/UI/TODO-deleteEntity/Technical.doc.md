@@ -1,12 +1,12 @@
-# View applications list: Technical document
+# Delete entity: Technical document
 
-| app      | feature id   | feature type | feature name           |
-| :------- | :----------- | :----------- | :--------------------- |
-| ZERO DEV | b7e1dabbe63b | web          | View applications list |
+| app      | feature id   | feature type | feature name  |
+| :------- | :----------- | :----------- | :------------ |
+| ZERO DEV | 4152b5de5aac | web          | Delete entity |
 
 ---
 
-View an application list in a table.
+Form to delete an entity.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

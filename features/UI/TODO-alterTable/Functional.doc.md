@@ -1,12 +1,12 @@
-# Create entity form: Functional document
+# Alter table: Functional document
 
-| app      | feature id   | feature type | feature name       |
-| :------- | :----------- | :----------- | :----------------- |
-| ZERO DEV | eb59edc8b79b | web          | Create entity form |
+| app      | feature id           | feature type | feature name |
+| :------- | :------------------- | :----------- | :----------- |
+| ZERO DEV | feature-0c25efc0f93e | web          | Alter table  |
 
 ---
 
-Form to create a new entity.
+The user can use the UI to modify a table data.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 

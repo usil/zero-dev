@@ -1,12 +1,12 @@
-# Delete entity: User guide document
+# Create composed origin field: User guide document
 
-| app      | feature id | feature type | feature name  | business unit | process   | department |
-| :------- | :--------- | :----------- | :------------ | :------------ | :-------- | :--------- |
-| ZERO DEV | feature-07 | web          | Delete entity | division x    | process y | finance    |
+| app      | feature id           | feature type | feature name                 |
+| :------- | :------------------- | :----------- | :--------------------------- |
+| ZERO DEV | feature-5ad81be021c3 | web          | Create composed origin field |
 
 ---
 
-Form to delete an entity.
+Form to create a field that has a composed origin.
 
 <img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
 
