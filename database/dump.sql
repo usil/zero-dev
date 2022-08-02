@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.36, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: data_atlas
+-- Host: 127.0.0.1    Database: zero_dev
 -- ------------------------------------------------------
 -- Server version	5.7.38-log
 
@@ -311,6 +311,28 @@ INSERT INTO `OAUTH2_Users` VALUES (1,1,'admin','$2b$10$E3PqXakI2TB4BTwzU/fraeWgr
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Personas`
+--
+
+DROP TABLE IF EXISTS `Personas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Personas` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Personas`
+--
+
+LOCK TABLES `Personas` WRITE;
+/*!40000 ALTER TABLE `Personas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Personas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Service`
 --
 
@@ -352,7 +374,7 @@ CREATE TABLE `application` (
   `memory` int(11) DEFAULT NULL COMMENT 'How many memoy should the app use',
   `generalVisualConfiguration` json DEFAULT NULL COMMENT 'A set of properties to set the visual style of the application\n',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -361,7 +383,7 @@ CREATE TABLE `application` (
 
 LOCK TABLES `application` WRITE;
 /*!40000 ALTER TABLE `application` DISABLE KEYS */;
-INSERT INTO `application` VALUES (1,'1.0.0','Facturacion','2000',NULL,NULL,NULL),(2,'0.0.1','Correo','2000',NULL,NULL,NULL),(3,'0.0.1','Services','2000',NULL,NULL,NULL),(4,'0.0.1','Planeamiento','2000',NULL,NULL,NULL);
+INSERT INTO `application` VALUES (1,'1.0.0','Facturacion','2000',NULL,NULL,NULL),(2,'0.0.1','Correo','2000',NULL,NULL,NULL),(3,'0.0.1','Services','2000',NULL,NULL,NULL),(4,'0.0.1','Planeamiento','2000',NULL,NULL,NULL),(6,'1.0.1','NuevaApp','2101',NULL,NULL,NULL),(7,'0.0.1','FinalVideo','1000',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `application` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -480,7 +502,7 @@ CREATE TABLE `data_base_origin` (
   UNIQUE KEY `foreignRelationId_UNIQUE` (`foreignRelationId`),
   KEY `fk_DataBaseOrigin_ForeignRelation1_idx` (`foreignRelationId`),
   CONSTRAINT `fk_DataBaseOrigin_ForeignRelation1` FOREIGN KEY (`foreignRelationId`) REFERENCES `foreign_relation` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -489,8 +511,31 @@ CREATE TABLE `data_base_origin` (
 
 LOCK TABLES `data_base_origin` WRITE;
 /*!40000 ALTER TABLE `data_base_origin` DISABLE KEYS */;
-INSERT INTO `data_base_origin` VALUES (1,NULL,'INT',0,1,1,1,'Primary key para boleta',NULL,NULL),(2,NULL,'VARCHAR',0,0,0,1,'Codigo de boleta',NULL,100),(3,NULL,'INT',0,1,1,1,'Primary key para service',NULL,NULL),(4,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(5,NULL,'VARCHAR',0,0,0,0,NULL,NULL,75),(6,NULL,'VARCHAR',1,0,0,0,NULL,NULL,255),(7,NULL,'INT',0,1,1,1,'Primary key para month service',NULL,NULL),(8,1,'INT',0,0,1,1,NULL,NULL,NULL),(9,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(10,NULL,'INT',0,1,1,1,'Proyect primary key',NULL,NULL),(11,NULL,'VARCHAR',0,0,0,0,'Nombre de proyecto',NULL,45),(12,NULL,'VARCHAR',0,0,0,0,'Descripcion de proyecto',NULL,155),(13,NULL,'INT',0,1,1,1,'Servicio primary key',NULL,NULL),(14,2,'INT',0,0,1,1,'Foreign relation with proyect',NULL,NULL),(15,NULL,'DATE',0,0,0,0,NULL,NULL,NULL),(16,NULL,'DATE',0,0,0,0,NULL,NULL,NULL),(17,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(18,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(19,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(20,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(21,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(22,NULL,'TINYINT',0,0,0,0,NULL,NULL,NULL),(23,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(24,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(25,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(26,NULL,'INT',0,1,1,1,NULL,NULL,NULL),(27,3,'INT',0,0,1,1,NULL,NULL,NULL),(28,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(29,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(30,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(31,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45);
+INSERT INTO `data_base_origin` VALUES (1,NULL,'INT',0,1,1,1,'Primary key para boleta',NULL,NULL),(2,NULL,'VARCHAR',0,0,0,1,'Codigo de boleta',NULL,100),(3,NULL,'INT',0,1,1,1,'Primary key para service',NULL,NULL),(4,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(5,NULL,'VARCHAR',0,0,0,0,NULL,NULL,75),(6,NULL,'VARCHAR',1,0,0,0,NULL,NULL,255),(7,NULL,'INT',0,1,1,1,'Primary key para month service',NULL,NULL),(8,1,'INT',0,0,1,1,NULL,NULL,NULL),(9,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(10,NULL,'INT',0,1,1,1,'Proyect primary key',NULL,NULL),(11,NULL,'VARCHAR',0,0,0,0,'Nombre de proyecto',NULL,45),(12,NULL,'VARCHAR',0,0,0,0,'Descripcion de proyecto',NULL,155),(13,NULL,'INT',0,1,1,1,'Servicio primary key',NULL,NULL),(14,2,'INT',0,0,1,1,'Foreign relation with proyect',NULL,NULL),(15,NULL,'DATE',0,0,0,0,NULL,NULL,NULL),(16,NULL,'DATE',0,0,0,0,NULL,NULL,NULL),(17,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(18,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(19,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(20,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(21,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(22,NULL,'TINYINT',0,0,0,0,NULL,NULL,NULL),(23,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(24,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(25,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(26,NULL,'INT',0,1,1,1,NULL,NULL,NULL),(27,3,'INT',0,0,1,1,NULL,NULL,NULL),(28,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(29,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(30,NULL,'DECIMAL',0,0,0,0,NULL,NULL,NULL),(31,NULL,'VARCHAR',0,0,0,0,NULL,NULL,45),(32,NULL,'VARCHAR',0,0,0,0,'El codigo postal de la direccion',NULL,10),(33,NULL,'VARCHAR',0,0,0,0,'La raza del gato',NULL,20);
 /*!40000 ALTER TABLE `data_base_origin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `direccion`
+--
+
+DROP TABLE IF EXISTS `direccion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `direccion` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `codigoPostal` varchar(10) NOT NULL COMMENT 'El codigo postal de la direccion',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `direccion`
+--
+
+LOCK TABLES `direccion` WRITE;
+/*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -546,7 +591,7 @@ CREATE TABLE `entity` (
   PRIMARY KEY (`id`),
   KEY `fk_Entity_Application1_idx` (`applicationId`),
   CONSTRAINT `fk_Entity_Application1` FOREIGN KEY (`applicationId`) REFERENCES `application` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -555,7 +600,7 @@ CREATE TABLE `entity` (
 
 LOCK TABLES `entity` WRITE;
 /*!40000 ALTER TABLE `entity` DISABLE KEYS */;
-INSERT INTO `entity` VALUES (1,1,'Boleta','enterprise',0,0,0,'table'),(2,1,'Clientes','person',0,0,0,'table'),(3,1,'qw','qwe',0,0,0,'table'),(4,1,'qwer','qwe',0,0,0,'table'),(5,2,'Service','test',0,0,0,'table'),(6,2,'service_month','test',0,0,0,'table'),(7,4,'servicio','test',0,0,0,'table'),(9,4,'proyecto','test',0,0,0,'table'),(10,4,'plan_mensual','test',0,0,0,'table');
+INSERT INTO `entity` VALUES (1,1,'Boleta','enterprise',0,0,0,'table'),(2,1,'Clientes','person',0,0,0,'table'),(3,1,'qw','qwe',0,0,0,'table'),(4,1,'qwer','qwe',0,0,0,'table'),(5,2,'Service','test',0,0,0,'table'),(6,2,'service_month','test',0,0,0,'table'),(7,4,'servicio','test',0,0,0,'table'),(9,4,'proyecto','test',0,0,0,'table'),(10,4,'plan_mensual','test',0,0,0,'table'),(11,6,'Personas','test',0,0,0,'table'),(12,6,'direccion','adress',0,0,0,'table'),(13,7,'gato','cats',0,0,0,'table');
 /*!40000 ALTER TABLE `entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -573,7 +618,7 @@ CREATE TABLE `entity_data_origin` (
   PRIMARY KEY (`id`,`type`),
   KEY `fk_entity_data_origin_entity1_idx` (`entityId`),
   CONSTRAINT `fk_entity_data_origin_entity1` FOREIGN KEY (`entityId`) REFERENCES `entity` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -582,7 +627,7 @@ CREATE TABLE `entity_data_origin` (
 
 LOCK TABLES `entity_data_origin` WRITE;
 /*!40000 ALTER TABLE `entity_data_origin` DISABLE KEYS */;
-INSERT INTO `entity_data_origin` VALUES (1,1,'local'),(2,2,'external'),(3,3,'local'),(4,5,'local'),(5,6,'local');
+INSERT INTO `entity_data_origin` VALUES (1,1,'local'),(2,2,'external'),(3,3,'local'),(4,5,'local'),(5,6,'local'),(6,11,'local'),(7,12,'local'),(8,13,'local');
 /*!40000 ALTER TABLE `entity_data_origin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -663,7 +708,7 @@ CREATE TABLE `field` (
   KEY `fk_field_data_base_origin1_idx` (`dataBaseOriginId`),
   CONSTRAINT `fk_field_data_base_origin1` FOREIGN KEY (`dataBaseOriginId`) REFERENCES `data_base_origin` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_field_entity1` FOREIGN KEY (`entityId`) REFERENCES `entity` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -672,18 +717,18 @@ CREATE TABLE `field` (
 
 LOCK TABLES `field` WRITE;
 /*!40000 ALTER TABLE `field` DISABLE KEYS */;
-INSERT INTO `field` VALUES (1,1,1,'id'),(2,1,2,'codigo'),(3,5,3,'id'),(4,5,4,'name'),(5,5,5,'director'),(6,5,6,'description'),(7,6,7,'id'),(8,6,8,'serviceId'),(9,6,9,'month'),(10,9,10,'id'),(11,9,11,'nombre'),(12,9,12,'descripcion'),(13,7,13,'id'),(14,7,14,'proyectoId'),(15,7,15,'fechaInicio'),(16,7,16,'fechaFin'),(17,7,17,'proveedor'),(18,7,18,'tipo'),(19,7,19,'monedaOrigen'),(20,7,20,'importeMonedaOrigen'),(21,7,21,'importe'),(22,7,22,'incluyeIRND'),(23,7,23,'porcentajeIRND'),(24,7,24,'total'),(25,7,25,'ejecutadoReal'),(26,10,26,'id'),(27,10,27,'servicioId'),(28,10,28,'mes'),(29,10,29,'costoPlaneado'),(30,10,30,'costoReal'),(31,7,31,'nombre');
+INSERT INTO `field` VALUES (1,1,1,'id'),(2,1,2,'codigo'),(3,5,3,'id'),(4,5,4,'name'),(5,5,5,'director'),(6,5,6,'description'),(7,6,7,'id'),(8,6,8,'serviceId'),(9,6,9,'month'),(10,9,10,'id'),(11,9,11,'nombre'),(12,9,12,'descripcion'),(13,7,13,'id'),(14,7,14,'proyectoId'),(15,7,15,'fechaInicio'),(16,7,16,'fechaFin'),(17,7,17,'proveedor'),(18,7,18,'tipo'),(19,7,19,'monedaOrigen'),(20,7,20,'importeMonedaOrigen'),(21,7,21,'importe'),(22,7,22,'incluyeIRND'),(23,7,23,'porcentajeIRND'),(24,7,24,'total'),(25,7,25,'ejecutadoReal'),(26,10,26,'id'),(27,10,27,'servicioId'),(28,10,28,'mes'),(29,10,29,'costoPlaneado'),(30,10,30,'costoReal'),(31,7,31,'nombre'),(32,11,6,'id'),(33,12,7,'id'),(34,12,32,'codigoPostal'),(35,13,8,'id'),(36,13,33,'raza');
 /*!40000 ALTER TABLE `field` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `field_input_configuration`
+-- Table structure for table `field_visual_configuration`
 --
 
-DROP TABLE IF EXISTS `field_input_configuration`;
+DROP TABLE IF EXISTS `field_visual_configuration`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `field_input_configuration` (
+CREATE TABLE `field_visual_configuration` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'The visual and functional configuration for the input representation of field in a form',
   `fieldId` int(10) unsigned NOT NULL,
   `label` varchar(45) NOT NULL COMMENT 'What to show in the label tag in html',
@@ -703,17 +748,17 @@ CREATE TABLE `field_input_configuration` (
   UNIQUE KEY `fieldId_UNIQUE` (`fieldId`),
   KEY `fk_FieldInputConfiguration_Field1_idx` (`fieldId`),
   CONSTRAINT `fk_FieldInputConfiguration_Field1` FOREIGN KEY (`fieldId`) REFERENCES `field` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `field_input_configuration`
+-- Dumping data for table `field_visual_configuration`
 --
 
-LOCK TABLES `field_input_configuration` WRITE;
-/*!40000 ALTER TABLE `field_input_configuration` DISABLE KEYS */;
-INSERT INTO `field_input_configuration` VALUES (1,1,'Id',1,1,NULL,NULL,NULL,'El id de la boleta',NULL,0,NULL,NULL,'text',0),(2,2,'Codigo',1,0,NULL,NULL,NULL,'Codigo de boleta',NULL,1,NULL,'{{$.extraSettings.signedUserDetails.mail}}-{{randstring}}','text',1),(3,3,'Id',1,0,NULL,NULL,NULL,'Service id',NULL,0,NULL,NULL,'text',0),(4,4,'Name',1,0,NULL,NULL,NULL,'Service name',NULL,1,NULL,NULL,'text',1),(5,5,'Director',1,1,NULL,NULL,NULL,'Service director',NULL,1,NULL,'{{$.extraSettings.signedUserDetails.mail}}','text',1),(6,6,'Description',1,0,NULL,NULL,NULL,'Service Description',NULL,1,NULL,NULL,'textarea',1),(7,7,'Id',1,0,NULL,NULL,NULL,'Service month id',NULL,0,NULL,NULL,'text',0),(8,8,'Service Id',1,0,NULL,NULL,NULL,'The service',NULL,1,NULL,NULL,'select',0),(9,9,'Month',0,0,'\"{\\\"datePickerConfig\\\":{\\\"view\\\":\\\"months\\\",\\\"minView\\\":\\\"months\\\",\\\"dateFormat\\\":\\\"MMMM\\\",\\\"autoClose\\\":true}}\"',NULL,NULL,'Month',NULL,1,NULL,NULL,'datepicker',1),(10,10,'Id',1,1,NULL,NULL,NULL,'Id del proyecto',NULL,0,NULL,NULL,'text',0),(11,11,'Nombre',1,0,NULL,NULL,NULL,'Nombre del proyecto',NULL,1,NULL,NULL,'text',1),(12,12,'Descripcion',1,0,NULL,NULL,NULL,'Descripcion del proyecto',NULL,1,NULL,NULL,'textarea',1),(26,13,'id',1,1,NULL,NULL,NULL,'Id del servicio',NULL,0,NULL,NULL,'text',0),(27,14,'Proyecto',1,0,NULL,NULL,NULL,'A que proyecto pertenece este servicio',NULL,1,NULL,NULL,'select',0),(28,15,'Fecha de inicio',1,0,'\"{}\"',NULL,NULL,'Fecha de inicio del servicio',NULL,1,NULL,NULL,'datepicker',0),(29,16,'Fecha de fin',1,0,NULL,NULL,NULL,'Fecha de fin de servicio',NULL,1,NULL,NULL,'datepicker',1),(30,17,'Proveedor',0,0,NULL,NULL,NULL,'El proveedor',NULL,1,NULL,NULL,'select',1),(31,18,'Tipo',1,0,NULL,NULL,NULL,'Tipo de servicio',NULL,1,NULL,NULL,'text',1),(32,19,'Moneda Origin',0,0,NULL,NULL,NULL,'Moneda de origen',NULL,1,NULL,NULL,'select',1),(33,20,'Importe en modena de origen',1,0,NULL,NULL,NULL,'Importe en la moneda de origen',NULL,1,NULL,NULL,'text',1),(34,21,'Importe',1,0,NULL,NULL,NULL,'Importe en soles',NULL,1,NULL,NULL,'text',1),(35,22,'Incluye IRND',0,0,NULL,NULL,NULL,'Importe incluye IRND?',NULL,1,NULL,NULL,'select',1),(36,23,'IRND%',1,0,NULL,NULL,NULL,'Porcentaje de IRND',NULL,1,NULL,NULL,'text',1),(37,24,'Total',1,0,NULL,NULL,NULL,'Importe total con IRND',NULL,1,NULL,NULL,'text',1),(38,25,'Total Ejecutado',1,0,NULL,NULL,NULL,'Importe total ejecutado',NULL,1,NULL,NULL,'text',1),(39,31,'nombre',1,0,NULL,NULL,NULL,'Nombre referencial del servicio',NULL,1,NULL,NULL,'text',1),(40,26,'Id',1,0,NULL,NULL,NULL,'Id del planeamiento mensual',NULL,0,NULL,NULL,'text',0),(41,27,'Servicio',1,0,NULL,NULL,NULL,'Servicio al que pertenece este planteamiento',NULL,1,NULL,NULL,'select',0),(42,28,'Mes',1,0,'\"{\\\"datePickerConfig\\\":{\\\"view\\\":\\\"months\\\",\\\"minView\\\":\\\"months\\\",\\\"dateFormat\\\":\\\"MMMM\\\",\\\"autoClose\\\":true}}\"',NULL,NULL,'Mes',NULL,1,NULL,NULL,'datepicker',0),(43,29,'Costo Planeado',1,0,NULL,NULL,NULL,'El costo estimado',NULL,1,NULL,NULL,'text',0),(44,30,'Costo Real',1,0,NULL,NULL,NULL,'Es costo real del mes',NULL,0,NULL,NULL,'text',1);
-/*!40000 ALTER TABLE `field_input_configuration` ENABLE KEYS */;
+LOCK TABLES `field_visual_configuration` WRITE;
+/*!40000 ALTER TABLE `field_visual_configuration` DISABLE KEYS */;
+INSERT INTO `field_visual_configuration` VALUES (1,1,'Id',1,1,NULL,NULL,NULL,'El id de la boleta',NULL,0,NULL,NULL,'text',0),(2,2,'Codigo',1,0,NULL,NULL,NULL,'Codigo de boleta',NULL,1,NULL,'{{$.extraSettings.signedUserDetails.mail}}-{{randstring}}','text',1),(3,3,'Id',1,0,NULL,NULL,NULL,'Service id',NULL,0,NULL,NULL,'text',0),(4,4,'Name',1,0,NULL,NULL,NULL,'Service name',NULL,1,NULL,NULL,'text',1),(5,5,'Director',1,1,NULL,NULL,NULL,'Service director',NULL,1,NULL,'{{$.extraSettings.signedUserDetails.mail}}','text',1),(6,6,'Description',1,0,NULL,NULL,NULL,'Service Description',NULL,1,NULL,NULL,'textarea',1),(7,7,'Id',1,0,NULL,NULL,NULL,'Service month id',NULL,0,NULL,NULL,'text',0),(8,8,'Service Id',1,0,NULL,NULL,NULL,'The service',NULL,1,NULL,NULL,'select',0),(9,9,'Month',0,0,'\"{\\\"datePickerConfig\\\":{\\\"view\\\":\\\"months\\\",\\\"minView\\\":\\\"months\\\",\\\"dateFormat\\\":\\\"MMMM\\\",\\\"autoClose\\\":true}}\"',NULL,NULL,'Month',NULL,1,NULL,NULL,'datepicker',1),(10,10,'Id',1,1,NULL,NULL,NULL,'Id del proyecto',NULL,0,NULL,NULL,'text',0),(11,11,'Nombre',1,0,NULL,NULL,NULL,'Nombre del proyecto',NULL,1,NULL,NULL,'text',1),(12,12,'Descripcion',1,0,NULL,NULL,NULL,'Descripcion del proyecto',NULL,1,NULL,NULL,'textarea',1),(26,13,'id',1,1,NULL,NULL,NULL,'Id del servicio',NULL,0,NULL,NULL,'text',0),(27,14,'Proyecto',1,0,NULL,NULL,NULL,'A que proyecto pertenece este servicio',NULL,1,NULL,NULL,'select',0),(28,15,'Fecha de inicio',1,0,'\"{}\"',NULL,NULL,'Fecha de inicio del servicio',NULL,1,NULL,NULL,'datepicker',0),(29,16,'Fecha de fin',1,0,NULL,NULL,NULL,'Fecha de fin de servicio',NULL,1,NULL,NULL,'datepicker',1),(30,17,'Proveedor',0,0,NULL,NULL,NULL,'El proveedor',NULL,1,NULL,NULL,'select',1),(31,18,'Tipo',1,0,NULL,NULL,NULL,'Tipo de servicio',NULL,1,NULL,NULL,'text',1),(32,19,'Moneda Origin',0,0,NULL,NULL,NULL,'Moneda de origen',NULL,1,NULL,NULL,'select',1),(33,20,'Importe en modena de origen',1,0,NULL,NULL,NULL,'Importe en la moneda de origen',NULL,1,NULL,NULL,'text',1),(34,21,'Importe',1,0,NULL,NULL,NULL,'Importe en soles',NULL,1,NULL,NULL,'text',1),(35,22,'Incluye IRND',0,0,NULL,NULL,NULL,'Importe incluye IRND?',NULL,1,NULL,NULL,'select',1),(36,23,'IRND%',1,0,NULL,NULL,NULL,'Porcentaje de IRND',NULL,1,NULL,NULL,'text',1),(37,24,'Total',1,0,NULL,NULL,NULL,'Importe total con IRND',NULL,1,NULL,NULL,'text',1),(38,25,'Total Ejecutado',1,0,NULL,NULL,NULL,'Importe total ejecutado',NULL,1,NULL,NULL,'text',1),(39,31,'nombre',1,0,NULL,NULL,NULL,'Nombre referencial del servicio',NULL,1,NULL,NULL,'text',1),(40,26,'Id',1,0,NULL,NULL,NULL,'Id del planeamiento mensual',NULL,0,NULL,NULL,'text',0),(41,27,'Servicio',1,0,NULL,NULL,NULL,'Servicio al que pertenece este planteamiento',NULL,1,NULL,NULL,'select',0),(42,28,'Mes',1,0,'\"{\\\"datePickerConfig\\\":{\\\"view\\\":\\\"months\\\",\\\"minView\\\":\\\"months\\\",\\\"dateFormat\\\":\\\"MMMM\\\",\\\"autoClose\\\":true}}\"',NULL,NULL,'Mes',NULL,1,NULL,NULL,'datepicker',0),(43,29,'Costo Planeado',1,0,NULL,NULL,NULL,'El costo estimado',NULL,1,NULL,NULL,'text',0),(44,30,'Costo Real',1,0,NULL,NULL,NULL,'Es costo real del mes',NULL,0,NULL,NULL,'text',1),(45,34,'Codigo postal',1,0,'{}','{}','{}','El codigo postal de la direccion','',1,NULL,'','text',1),(46,36,'Raza',0,0,'{}','{}','{}','La raza del gato','',1,NULL,'albino','select',1);
+/*!40000 ALTER TABLE `field_visual_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -732,7 +777,7 @@ CREATE TABLE `fields_list_configuration` (
   PRIMARY KEY (`id`),
   KEY `fk_fields_list_configuration_field1_idx` (`fieldId`),
   CONSTRAINT `fk_fields_list_configuration_field1` FOREIGN KEY (`fieldId`) REFERENCES `field` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -741,7 +786,7 @@ CREATE TABLE `fields_list_configuration` (
 
 LOCK TABLES `fields_list_configuration` WRITE;
 /*!40000 ALTER TABLE `fields_list_configuration` DISABLE KEYS */;
-INSERT INTO `fields_list_configuration` VALUES (1,1,1,'Id',NULL),(2,2,1,'Codigo',NULL),(3,3,1,'Id',NULL),(4,4,1,'Name',NULL),(5,5,1,'Director',NULL),(6,6,1,'Description',NULL),(7,7,1,'Id',NULL),(8,8,1,'Service Id',NULL),(9,9,1,'Month',NULL),(10,10,1,'Id',NULL),(11,11,1,'Nombre',NULL),(12,12,1,'Descripcion',NULL),(13,13,1,'Id',NULL),(14,14,1,'Proyecto',NULL),(15,15,1,'Fecha inicio',NULL),(16,16,1,'Fecha fin',NULL),(17,17,1,'Proveedor',NULL),(18,18,1,'Tipo',NULL),(19,19,1,'Moneda de origen',NULL),(20,20,1,'Importe en moneda de origen',NULL),(21,21,1,'Importe',NULL),(22,22,1,'Incluye IRND',NULL),(23,23,1,'Porcentaje IRND',NULL),(24,24,1,'Total',NULL),(25,25,1,'Costo Real',NULL),(26,31,1,'Nombre',NULL),(27,26,1,'Id',NULL),(28,27,1,'Servicio',NULL),(29,28,1,'Mes',NULL),(30,29,1,'Costo Planeado',NULL),(31,30,1,'Costo Real',NULL);
+INSERT INTO `fields_list_configuration` VALUES (1,1,1,'Id',NULL),(2,2,1,'Codigo',NULL),(3,3,1,'Id',NULL),(4,4,1,'Name',NULL),(5,5,1,'Director',NULL),(6,6,1,'Description',NULL),(7,7,1,'Id',NULL),(8,8,1,'Service Id',NULL),(9,9,1,'Month',NULL),(10,10,1,'Id',NULL),(11,11,1,'Nombre',NULL),(12,12,1,'Descripcion',NULL),(13,13,1,'Id',NULL),(14,14,1,'Proyecto',NULL),(15,15,1,'Fecha inicio',NULL),(16,16,1,'Fecha fin',NULL),(17,17,1,'Proveedor',NULL),(18,18,1,'Tipo',NULL),(19,19,1,'Moneda de origen',NULL),(20,20,1,'Importe en moneda de origen',NULL),(21,21,1,'Importe',NULL),(22,22,1,'Incluye IRND',NULL),(23,23,1,'Porcentaje IRND',NULL),(24,24,1,'Total',NULL),(25,25,1,'Costo Real',NULL),(26,31,1,'Nombre',NULL),(27,26,1,'Id',NULL),(28,27,1,'Servicio',NULL),(29,28,1,'Mes',NULL),(30,29,1,'Costo Planeado',NULL),(31,30,1,'Costo Real',NULL),(32,34,1,'Codigo Postal',''),(33,36,1,'Raza','');
 /*!40000 ALTER TABLE `fields_list_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -762,7 +807,7 @@ CREATE TABLE `filter_configuration` (
   PRIMARY KEY (`id`),
   KEY `fk_filter_configuration_fields_list_configuration1_idx` (`fieldsListConfigurationId`),
   CONSTRAINT `fk_filter_configuration_fields_list_configuration1` FOREIGN KEY (`fieldsListConfigurationId`) REFERENCES `fields_list_configuration` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -771,7 +816,7 @@ CREATE TABLE `filter_configuration` (
 
 LOCK TABLES `filter_configuration` WRITE;
 /*!40000 ALTER TABLE `filter_configuration` DISABLE KEYS */;
-INSERT INTO `filter_configuration` VALUES (1,2,'like','rleoni@usil.edu.pe',0,0);
+INSERT INTO `filter_configuration` VALUES (1,2,'like','rleoni@usil.edu.pe',0,0),(2,32,'all',NULL,1,0),(3,33,'all',NULL,1,0);
 /*!40000 ALTER TABLE `filter_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -803,6 +848,28 @@ LOCK TABLES `foreign_relation` WRITE;
 /*!40000 ALTER TABLE `foreign_relation` DISABLE KEYS */;
 INSERT INTO `foreign_relation` VALUES (1,'Service','name','id',NULL,0,NULL,'one-to-many'),(2,'proyecto','nombre','id',NULL,0,NULL,'one-to-one'),(3,'servicio','nombre','id',NULL,0,NULL,'one-to-many');
 /*!40000 ALTER TABLE `foreign_relation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gato`
+--
+
+DROP TABLE IF EXISTS `gato`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gato` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gato`
+--
+
+LOCK TABLES `gato` WRITE;
+/*!40000 ALTER TABLE `gato` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gato` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1016,12 +1083,12 @@ DROP TABLE IF EXISTS `possible_value`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `possible_value` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'The possible values for a select or autocomplete',
-  `fieldInputlConfigurationId` int(10) unsigned NOT NULL,
+  `fieldInputConfigurationId` int(10) unsigned NOT NULL,
   `value` varchar(45) NOT NULL COMMENT 'The real value on a select or autocomple',
   `displayValue` varchar(45) NOT NULL COMMENT 'The value shown on a select or auto complete',
   PRIMARY KEY (`id`),
-  KEY `fk_select_value_field_input_visual_configuration1_idx` (`fieldInputlConfigurationId`),
-  CONSTRAINT `fk_select_value_field_input_visual_configuration1` FOREIGN KEY (`fieldInputlConfigurationId`) REFERENCES `field_input_configuration` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_select_value_field_input_visual_configuration1_idx` (`fieldInputConfigurationId`),
+  CONSTRAINT `fk_select_value_field_input_visual_configuration1` FOREIGN KEY (`fieldInputConfigurationId`) REFERENCES `field_visual_configuration` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1275,7 +1342,7 @@ CREATE TABLE `subject` (
   `identifier` varchar(75) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `identifier_UNIQUE` (`identifier`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1284,7 +1351,7 @@ CREATE TABLE `subject` (
 
 LOCK TABLES `subject` WRITE;
 /*!40000 ALTER TABLE `subject` DISABLE KEYS */;
-INSERT INTO `subject` VALUES (1,'admin');
+INSERT INTO `subject` VALUES (1,'admin'),(3,'super'),(2,'test');
 /*!40000 ALTER TABLE `subject` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1305,7 +1372,7 @@ CREATE TABLE `subject_entity_configuration` (
   KEY `fk_user_entity_configuration_entity1_idx` (`entityId`),
   CONSTRAINT `fk_user_entity_configuration_entity1` FOREIGN KEY (`entityId`) REFERENCES `entity` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_user_entity_configuration_user1` FOREIGN KEY (`subjectId`) REFERENCES `subject` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1314,7 +1381,7 @@ CREATE TABLE `subject_entity_configuration` (
 
 LOCK TABLES `subject_entity_configuration` WRITE;
 /*!40000 ALTER TABLE `subject_entity_configuration` DISABLE KEYS */;
-INSERT INTO `subject_entity_configuration` VALUES (1,1,1,'CRUD'),(2,1,2,'CRU'),(3,1,3,'CRUD');
+INSERT INTO `subject_entity_configuration` VALUES (1,1,1,'CRUD'),(2,1,2,'CRU'),(3,1,3,'CRUD'),(4,1,11,'CRUD'),(5,1,12,'CRUD'),(6,1,13,'CRUD');
 /*!40000 ALTER TABLE `subject_entity_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1406,11 +1473,11 @@ LOCK TABLES `web_hook` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'data_atlas'
+-- Dumping events for database 'zero_dev'
 --
 
 --
--- Dumping routines for database 'data_atlas'
+-- Dumping routines for database 'zero_dev'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -1422,4 +1489,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-18 15:24:57
+-- Dump completed on 2022-08-02 11:14:13
