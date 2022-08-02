@@ -497,7 +497,7 @@ CREATE TABLE `data_base_origin` (
   `isUnique` tinyint(1) DEFAULT '0' COMMENT 'Is the column unique',
   `comment` varchar(155) DEFAULT NULL COMMENT 'The comment of the column',
   `defaultValue` varchar(155) DEFAULT NULL COMMENT 'What is this field default value',
-  `variableLength` smallint(6) DEFAULT NULL COMMENT 'The variable lenght in the database',
+  `variableLength` varchar(10) DEFAULT NULL COMMENT 'The variable lenght in the database',
   PRIMARY KEY (`id`),
   UNIQUE KEY `foreignRelationId_UNIQUE` (`foreignRelationId`),
   KEY `fk_DataBaseOrigin_ForeignRelation1_idx` (`foreignRelationId`),
@@ -742,7 +742,7 @@ CREATE TABLE `field_visual_configuration` (
   `onCreate` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'Disable the input in the form',
   `useInnerForm` varchar(45) DEFAULT NULL,
   `defaultValue` varchar(150) DEFAULT NULL,
-  `type` varchar(45) DEFAULT NULL,
+  `type` varchar(45) DEFAULT NULL NOT NULL,
   `editable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `fieldId_UNIQUE` (`fieldId`),
@@ -835,7 +835,7 @@ CREATE TABLE `foreign_relation` (
   `intermediateTable` varchar(75) DEFAULT NULL COMMENT 'The link table if the relationship is many to many',
   `showForeignForm` tinyint(1) DEFAULT '0' COMMENT 'Show the foreign form',
   `intermediatePrimaryKey` varchar(45) DEFAULT NULL COMMENT 'The PK of the union table in the mtm relation',
-  `relationshipType` varchar(45) DEFAULT 'onetoone' COMMENT 'The type of relation, many to many, one to many or one to one',
+  `relationshipType` varchar(45) DEFAULT 'one-to-one' COMMENT 'The type of relation, many to many, one to many or one to one',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
