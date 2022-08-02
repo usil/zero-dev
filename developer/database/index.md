@@ -8,15 +8,16 @@
 
 Data base scheme for the configuration of ZERO DEV. This schema will be used to create a new system in a RAD way.
 
-<img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">
-
 ## Diagram
 
-![schema](https://i.ibb.co/wwZHxt0/schema-Image.png)
+[<img src="https://i.ibb.co/rt0Hf3q/video.png" width="100">](https://drive.google.com/file/d/1U2xbG1JY3kbkt3CCJMvn3jNX-Wv5QtnU/view)
+
+![image](https://user-images.githubusercontent.com/3322836/182487137-dc1ffae6-b541-4f09-8dd3-873c69fc31e6.png)
+
 
 ## Editable file
 
-Editable schema file for MySql Workbench. [download](https://drive.google.com/file/d/1fPxnR_a1MA79gV-KpKpUcf-lSZzLbMsi/view?usp=sharing)
+Editable schema file for MySql Workbench. [download](https://drive.google.com/file/d/1tdUdHpPjn_y7RscotJhzDnfHiG_EtQ3y/view?usp=sharing)
 
 ## Data Dictionary
 
