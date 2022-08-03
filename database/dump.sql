@@ -742,7 +742,7 @@ CREATE TABLE `field_visual_configuration` (
   `onCreate` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'Disable the input in the form',
   `useInnerForm` varchar(45) DEFAULT NULL,
   `defaultValue` varchar(150) DEFAULT NULL,
-  `type` varchar(45) DEFAULT NULL NOT NULL,
+  `type` varchar(45) NOT NULL,
   `editable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `fieldId_UNIQUE` (`fieldId`),
